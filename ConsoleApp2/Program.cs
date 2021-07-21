@@ -24,7 +24,8 @@ namespace ConsoleApp2
                     "3.Добавление в список\n" +
                     "4.Удаление из списка\n" +
                     "5.Изменение записи\n");
-                c = Convert.ToInt32(Console.ReadLine());
+                c = Console.Read() - '0';
+                Console.ReadLine();
                 if (c == 1)
                 {
                     data = days.GetData();
