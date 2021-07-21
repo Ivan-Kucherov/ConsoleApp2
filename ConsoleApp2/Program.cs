@@ -11,6 +11,12 @@ namespace ConsoleApp2
             int c;
             DataTable data;
             DataView view;
+            data = days.GetData();
+            Console.WriteLine("id   Имя           Дата рождения      Заметки");
+            foreach (DataRow item in data.Rows)
+            {
+                Console.WriteLine(item[0].ToString() + "  " + item[1].ToString() + ((DateTime)item[2]).ToShortDateString() + "       " + item[3].ToString());
+            }
             while (true)
             {
                 Console.Write("1.Вывод списка дней рождения\n" +
